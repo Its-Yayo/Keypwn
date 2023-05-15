@@ -1,6 +1,6 @@
 # Keypwn
 
-Keypwn is a single keylogger tool for pentesting written in Python under the GPLv3 license. More details soon...
+Keypwn is a single keylogger tool for pentesting written in Python. More details soon...
 
 You can test this project in your localhost by cloning it. 
 ```
