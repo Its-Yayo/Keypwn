@@ -4,6 +4,7 @@ import sys
 import datetime
 from pynput.keyboard import Listener
 
+# TODO: Check out server depl
 def get_current_date_time() -> str:
     return datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
